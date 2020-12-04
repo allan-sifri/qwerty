@@ -1,0 +1,292 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}*, *:before, *:after {
+box-sizing: inherit;
+}
+title{
+    text-align: center;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+h1 {
+    font-size: 3.8rem;
+    text-align: center;
+    z-index: 2;
+    
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 20px;
+    font-style: normal;
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+}
+
+.zindex2{
+    z-index: 2;
+}
+
+/* Header */
+
+.site_header {
+    background-image:url("ImagenesBDD/comidafondo.jpeg");
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-blend-mode: lighten;
+    padding: 2rem;
+    height: 40rem;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.barra img {
+    max-width: 30rem;
+    min-width: 2rem;
+    margin-left: 25%;
+    margin-top: -3%;
+    
+}
+
+.navegacion a{
+    font-size: 20px;
+    margin-right: 5rem;
+    line-height: 4rem;
+    color: brown;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: justify;
+    display: flex;
+}
+
+    
+
+.contenido-ajustar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Main */
+
+.contenedor {
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+.contenedor h2 {
+    color: gray;
+    text-align: center;
+    font-weight: 800;
+}
+
+
+.cuerpos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    
+
+}
+
+
+
+.equipo {
+    display: flex;
+}
+
+.persona {
+    background-color: #00b5e2;
+    margin: 10px;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.persona h3 {
+    text-transform: uppercase;
+}
+
+.persona li {
+    color: black;
+    font-weight: bold;
+}
+
+.persona li a {
+    text-decoration: none;
+    color: black;
+}
+
+.accordion__button{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    cursor: pointer;
+    background-image:url("ImagenesBDD/backgroundboton.png") ;
+    transition: background 0.2s;
+}
+
+.accordion__button::after{
+    content:"\25be";
+    float: right;
+    transform: scale(2);
+}
+
+.accordion__button--active::after{content: "\25b4"}
+
+.accordion__content{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    max-height: 0;
+    transition: max-height 0.2s;
+    padding: 0 15px;
+    position: relative;
+    margin: 0 auto 0 auto;
+    z-index: 2;
+}
+
+.accordion__content img{
+    margin-top: 20;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.accordion__content h4{
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+.accordion__content h3{
+    padding: 50px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    
+}
+.accordion__content h1{
+padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.accordion__content h5{
+    position: relative;
+    z-index: 2;
+}
+
+
+.accordion__content::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image:url("ImagenesBDD/cornfield.jpg");
+    background-size: cover;
+}
+
+.bodycompleto{
+    background-color: bisque;
+}
+
+.bodyadmin{
+    background: red;
+}
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    background: lightsalmon;
+    padding: 35px;
+    border: 2px lightsalmon;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+    }
+    
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    }
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+    }
+    
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    z-index: 4;
+    background: lightcoral;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    }
+    
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    }
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    }
+.popup .close:hover {
+    color: #06D85F;
+    }
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+    }
+    
+@media screen and (max-width: 700px){
+    .box{
+        width: 70%;
+        }
+    .popup{
+        width: 70%;
+        }
+        }
